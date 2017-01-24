@@ -1,26 +1,20 @@
-const http = require('http');
+var express = require('express');
+var app = express();
 
-const fs = require('fs');
+app.set('port', (process.env.PORT || 5000));
 
-const hostname = '127.0.0.1';
+app.use(express.static(__dirname + '/public'));
 
-const port = 3000;
-fs.readFile('/views/pages/index.html', (err, html) => {
-	if(err){
-			throw err;
-	}
-	const server = http.createServer((req, res) =>{
-			res.statusCode = 200;
-			res.setHeader('Content-type', 'text/html');
-			res.write(html);
-			res.end();
-	});
-	server.listen(port,hostname, () =>{
-		console.log('Server started on port '+port);
-	});
+// views is directory for all template files
+app.set('views', __dirname + '/views');
+app.set('view engine', 'html');
+
+app.get('/', function(request, response) {
+  response.render('pages/index');
 });
 
-		
-
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
 
 
