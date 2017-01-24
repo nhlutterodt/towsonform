@@ -1,0 +1,20 @@
+{
+  "name": "TowsonForm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "jsforce": "^1.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nhlutterodt/towsonform"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Neils Haldane-Lutterodt",
+  "license": "MIT",
+  "description": "This is an application to create a contact using an html form for a specific site."
+}
