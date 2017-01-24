@@ -2,6 +2,10 @@
   "name": "TowsonForm",
   "version": "1.0.0",
   "main": "index.js",
+  
+  "engines": {
+    "node": "4.1.1"
+  },
   "dependencies": {
     "jsforce": "^1.7.1"
   },
